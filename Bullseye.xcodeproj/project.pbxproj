@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D067A9F92440C729004A6E0A /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D067A9F82440C729004A6E0A /* AboutView.swift */; };
 		D0BD26872438844000F218ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BD26862438844000F218ED /* AppDelegate.swift */; };
 		D0BD26892438844000F218ED /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BD26882438844000F218ED /* SceneDelegate.swift */; };
 		D0BD268B2438844000F218ED /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BD268A2438844000F218ED /* ContentView.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D067A9F82440C729004A6E0A /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		D0BD26832438844000F218ED /* Bullseye.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bullseye.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0BD26862438844000F218ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0BD26882438844000F218ED /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				D0BD26912438844100F218ED /* LaunchScreen.storyboard */,
 				D0BD26942438844100F218ED /* Info.plist */,
 				D0BD268E2438844100F218ED /* Preview Content */,
+				D067A9F82440C729004A6E0A /* AboutView.swift */,
 			);
 			path = Bullseye;
 			sourceTree = "<group>";
@@ -146,6 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D067A9F92440C729004A6E0A /* AboutView.swift in Sources */,
 				D0BD26872438844000F218ED /* AppDelegate.swift in Sources */,
 				D0BD26892438844000F218ED /* SceneDelegate.swift in Sources */,
 				D0BD268B2438844000F218ED /* ContentView.swift in Sources */,

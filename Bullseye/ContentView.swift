@@ -110,7 +110,7 @@ struct ContentView: View {
                 Text("Round:").modifier(LabelStyle())
                 Text("\(round)").modifier(ValueStyle())
                 Spacer()
-                Button(action: {}) {
+                NavigationLink(destination: AboutView()) {
                     HStack {
                         Image("InfoIcon")
                         Text("Info").modifier(ButtonSmallTextStyle())
@@ -122,8 +122,9 @@ struct ContentView: View {
             }
             .padding(.bottom, 20)
         }
-        .background(Image("Background"), alignment: .top)
+        .background(Image("Background"), alignment: .center)
         .accentColor(midnightBlue)
+        .navigationBarTitle("Bullseye")
     }
     
     func amountOff() -> Int {
