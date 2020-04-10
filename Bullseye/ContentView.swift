@@ -39,7 +39,7 @@ struct ContentView: View {
                 Text(/*@START_MENU_TOKEN@*/"Hit Me!"/*@END_MENU_TOKEN@*/)
             }
             .alert(isPresented: $alertIsVisible) {
-                return Alert(title: Text("Hello there!"), message: Text(
+                return Alert(title: Text(alertTitle()), message: Text(
                     "The Slider's value is \(sliderValueRounded()).\n" +
                     "You scored \(pointsForCurrentRound()) points this round."
                     ), dismissButton: .default(Text("Awesome!")) {
@@ -51,7 +51,7 @@ struct ContentView: View {
             Spacer()
             // Score row
             HStack {
-                Button(action: {}) {
+                Button(action: startNewGame) {
                     Text("Start Over")
                 }
                 Spacer()
@@ -69,12 +69,50 @@ struct ContentView: View {
         }
     }
     
+    func amountOff() -> Int {
+        return abs(sliderValueRounded() - target)
+    }
+    
     func pointsForCurrentRound() -> Int {
-        100 - abs(sliderValueRounded() - target)
+        let maximumScore = 100
+        let difference = amountOff()
+        let bonus: Int
+        if amountOff() == 0 {
+            bonus = 100
+        } else if amountOff() == 1 {
+            bonus = 50
+        } else {
+            bonus = 0
+        }
+        
+        return maximumScore - difference + bonus
     }
     
     func sliderValueRounded() -> Int {
         Int(sliderValue.rounded())
+    }
+    
+    func alertTitle() -> String {
+        let difference = amountOff()
+        let title: String
+        if difference == 0 {
+            title = "Perfect!"
+        } else if difference < 5 {
+            title = "You almost had it!"
+        } else if difference <= 10 {
+            title = "Not bad."
+        } else {
+            title = "Are you even trying?"
+        }
+        
+        return title
+    }
+    
+    func startNewGame() {
+        target = Int.random(in: 1...100)
+        score = 0
+        round = 1
+        sliderValue = 50
     }
 }
 
